@@ -1,2 +1,0 @@
-Delivery robot: Partially observable; Stochastic in the real world; deterministic only in a fixed simulator. occluded pedestrians and unobserved obstacles.
-LLM student-support agent: Partially observable; Stochastic output generation and uncertain user/tool outcomes. limited context and no access to private records by assumption.
