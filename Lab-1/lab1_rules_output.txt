@@ -1,0 +1,5 @@
+case | inputs(score,docs,gpa,deadline) | expected | actual | reason | PASS
+pass | (80,True,True,True) | Review | Review | all screening conditions passed; human review required | True
+GPA failure | (80,True,False,True) | Hold | Hold | GPA eligibility condition failed | True
+deadline failure | (80,True,True,False) | Hold | Hold | deadline condition failed | True
+threshold boundary | (70,True,True,True) | Review | Review | all screening conditions passed; human review required | True
