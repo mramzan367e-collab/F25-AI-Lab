@@ -1,0 +1,17 @@
+Heuristic admissibility/consistency audit
+S: h=5, true_remaining=6, admissible=True
+A: h=4, true_remaining=5, admissible=True
+B: h=4, true_remaining=5, admissible=True
+C: h=2, true_remaining=3, admissible=True
+G: h=0, true_remaining=0, admissible=True
+edge S->A: 5 <= 1+4 is True
+edge S->B: 5 <= 4+4 is True
+edge A->C: 4 <= 2+2 is True
+edge B->G: 4 <= 5+0 is True
+edge C->G: 2 <= 3+0 is True
+A*: path=['S', 'A', 'C', 'G'], cost=6, independent_sum=6, processed=['S', 'A', 'C', 'G'], expanded=['S', 'A', 'C'], expansion_count=3
+  g,h,f trace: [('S', 0, 5, 5), ('A', 1, 4, 5), ('C', 3, 2, 5), ('G', 6, 0, 6)]
+UCS (h=0): path=['S', 'A', 'C', 'G'], cost=6, independent_sum=6, processed=['S', 'A', 'C', 'B', 'G'], expanded=['S', 'A', 'C', 'B'], expansion_count=4
+  g,h,f trace: [('S', 0, 0, 0), ('A', 1, 0, 1), ('C', 3, 0, 3), ('B', 4, 0, 4), ('G', 6, 0, 6)]
+A* overestimate h(C)=10: path=['S', 'B', 'G'], cost=9, independent_sum=9, processed=['S', 'A', 'B', 'G'], expanded=['S', 'A', 'B'], expansion_count=3
+  g,h,f trace: [('S', 0, 5, 5), ('A', 1, 4, 5), ('B', 4, 4, 8), ('G', 9, 0, 9)]
